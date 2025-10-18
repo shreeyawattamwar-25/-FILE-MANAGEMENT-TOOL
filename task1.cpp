@@ -46,10 +46,10 @@ void writeFile() {
 
     if (outFile.is_open()) {
         outFile << content << "\n";
-        std::cout << "✅ Success: Data successfully wrote to '" << fileName << "'.\n";
+        std::cout << " Success: Data successfully wrote to '" << fileName << "'.\n";
         outFile.close(); // Close the stream
     } else {
-        std::cerr << "❌ Error: Could not open file '" << fileName << "' for writing.\n";
+        std::cerr << " Error: Could not open file '" << fileName << "' for writing.\n";
     }
 }
 
@@ -75,7 +75,7 @@ void readFile() {
         std::cout << "-----------------------------------\n";
         inFile.close(); // Close the stream
     } else {
-        std::cerr << "❌ Error: File '" << fileName << "' not found or could not be opened for reading.\n";
+        std::cerr << " Error: File '" << fileName << "' not found or could not be opened for reading.\n";
     }
 }
 
@@ -98,10 +98,10 @@ void appendFile() {
     if (appendFile.is_open()) {
         // Add a newline before the new content for clear separation in the file
         appendFile << "\n" << content;
-        std::cout << "➕ Success: Data successfully appended to '" << fileName << "'.\n";
+        std::cout << " Success: Data successfully appended to '" << fileName << "'.\n";
         appendFile.close(); // Close the stream
     } else {
-        std::cerr << "❌ Error: Could not open file '" << fileName << "' for appending.\n";
+        std::cerr << " Error: Could not open file '" << fileName << "' for appending.\n";
     }
 }
 
@@ -133,7 +133,7 @@ int main() {
                 appendFile();
                 break;
             case 4:
-                std::cout << "👋 Exiting the File Management Tool. Goodbye!\n";
+                std::cout << " Exiting the File Management Tool. Goodbye!\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please select 1, 2, 3, or 4.\n";
@@ -142,4 +142,5 @@ int main() {
     } while (choice != 4);
 
     return 0;
+
 }
